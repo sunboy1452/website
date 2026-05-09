@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChevronDown, ArrowRight, Sparkles } from 'lucide-react';
+import { ChevronDown, ArrowRight, Sparkles, Users, Award, TrendingUp } from 'lucide-react';
 
 export default function Hero() {
   const scrollToProjects = () => {
@@ -33,7 +33,7 @@ export default function Hero() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm">
               <Sparkles size={14} />
-              专注全栈开发 6 年
+              企业级软件解决方案专家
             </span>
           </motion.div>
 
@@ -43,10 +43,10 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-4 leading-tight"
           >
-            用代码构建
+            专注企业数字化
             <br />
             <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              卓越的数字产品
+              赋能业务增长
             </span>
           </motion.h1>
 
@@ -56,9 +56,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed"
           >
-            擅长园区管理系统、工厂MES、企业官网、数据可视化等项目的开发，
+            致力于为企业提供高质量的园区管理、智能制造、企业官网、数据可视化等领域的软件开发服务，
             <br className="hidden sm:block" />
-            致力于为客户交付高质量、可扩展的软件解决方案
+            助力企业实现数字化转型与业务升级
           </motion.p>
 
           <motion.div
@@ -71,14 +71,14 @@ export default function Hero() {
               onClick={scrollToProjects}
               className="group w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium rounded-full hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 flex items-center justify-center gap-2"
             >
-              查看项目案例
+              了解更多
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={scrollToContact}
               className="w-full sm:w-auto px-6 py-3 bg-slate-800/50 border border-slate-700 text-white font-medium rounded-full hover:bg-slate-800 hover:border-slate-600 transition-all duration-300"
             >
-              获取报价方案
+              联系我们
             </button>
           </motion.div>
 
@@ -86,21 +86,30 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-12 flex items-center justify-center gap-6 text-slate-500"
+            className="mt-12 flex items-center justify-center gap-8 text-slate-500"
           >
             <div className="text-center">
-              <div className="text-2xl font-bold text-white">50+</div>
-              <div className="text-xs">成功项目</div>
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <Users size={20} className="text-indigo-400" />
+                <div className="text-2xl font-bold text-white">100+</div>
+              </div>
+              <div className="text-xs">服务企业</div>
             </div>
             <div className="w-px h-8 bg-slate-700" />
             <div className="text-center">
-              <div className="text-2xl font-bold text-white">6+</div>
-              <div className="text-xs">年开发经验</div>
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <Award size={20} className="text-green-400" />
+                <div className="text-2xl font-bold text-white">200+</div>
+              </div>
+              <div className="text-xs">成功案例</div>
             </div>
             <div className="w-px h-8 bg-slate-700" />
             <div className="text-center">
-              <div className="text-2xl font-bold text-white">30+</div>
-              <div className="text-xs">合作客户</div>
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <TrendingUp size={20} className="text-purple-400" />
+                <div className="text-2xl font-bold text-white">8+</div>
+              </div>
+              <div className="text-xs">年行业经验</div>
             </div>
           </motion.div>
         </div>

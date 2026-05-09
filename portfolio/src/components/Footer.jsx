@@ -1,16 +1,16 @@
 import { motion } from 'framer-motion';
-import { Mail, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
 
 const socialLinks = [
   { label: 'GitHub', href: 'https://github.com' },
-  { label: 'LinkedIn', href: 'https://linkedin.com' },
-  { label: '邮箱', href: 'mailto:contact@example.com' }
+  { label: '微信公众号', href: '#' },
+  { label: '商务合作', href: 'mailto:business@example.com' }
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-slate-900 border-t border-slate-800 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <motion.div
             initial={{ opacity: 0 }}
@@ -20,9 +20,12 @@ export default function Footer() {
             className="flex items-center gap-3"
           >
             <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl font-heading">D</span>
+              <span className="text-white font-bold text-lg font-heading">智</span>
             </div>
-            <span className="text-xl font-heading font-semibold text-white">DevPortfolio</span>
+            <div>
+              <span className="text-xl font-heading font-semibold text-white">智创科技</span>
+              <div className="text-slate-500 text-xs">企业级软件解决方案专家</div>
+            </div>
           </motion.div>
 
           <motion.div
@@ -53,7 +56,7 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             className="text-slate-500 text-sm flex items-center gap-1"
           >
-            © 2024 All rights reserved. Made with <Heart size={14} className="text-red-500" /> by DevPortfolio
+            © 2024 智创科技 All rights reserved. 
           </motion.div>
         </div>
       </div>

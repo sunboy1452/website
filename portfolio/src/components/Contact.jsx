@@ -1,29 +1,29 @@
 import { motion } from 'framer-motion';
-import { Send, Mail, Phone, MessageCircle, ArrowRight } from 'lucide-react';
+import { Send, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 
 const projectTypes = [
   { value: 'park', label: '智慧园区系统' },
-  { value: 'factory', label: '工厂管理系统' },
+  { value: 'factory', label: '智能制造MES' },
   { value: 'website', label: '企业官网' },
   { value: 'admin', label: '管理后台' },
   { value: 'visualization', label: '数据可视化' },
-  { value: 'other', label: '其他项目' }
+  { value: 'custom', label: '定制开发' }
 ];
 
 const budgetRanges = [
-  { value: '10k-30k', label: '1-3 万' },
-  { value: '30k-50k', label: '3-5 万' },
-  { value: '50k-100k', label: '5-10 万' },
-  { value: '100k+', label: '10 万以上' },
+  { value: '10k-50k', label: '5-10 万' },
+  { value: '50k-100k', label: '10-30 万' },
+  { value: '100k-300k', label: '30-100 万' },
+  { value: '300k+', label: '100 万以上' },
   { value: 'negotiable', label: '面议' }
 ];
 
 const timelines = [
   { value: '1month', label: '1 个月内' },
-  { value: '2months', label: '1-2 个月' },
-  { value: '3months', label: '2-3 个月' },
-  { value: '3months+', label: '3 个月以上' }
+  { value: '2months', label: '1-3 个月' },
+  { value: '6months', label: '3-6 个月' },
+  { value: '6months+', label: '6 个月以上' }
 ];
 
 export default function Contact() {
@@ -72,10 +72,10 @@ export default function Contact() {
         >
           <span className="text-indigo-400 font-medium text-sm mb-2 block">联系我们</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-white mb-3">
-            开始您的项目
+            开启您的数字化之旅
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto text-sm">
-            有项目需求？填写表单或直接联系，我将尽快回复您
+            无论您有任何项目需求或疑问，我们的专业团队都将为您提供免费咨询
           </p>
         </motion.div>
 
@@ -91,46 +91,46 @@ export default function Contact() {
               <h3 className="text-lg font-semibold text-white mb-4">联系方式</h3>
               
               <div className="space-y-3">
-                <a href="mailto:contact@example.com" className="flex items-center gap-3 p-3 bg-slate-900/50 rounded-lg hover:bg-slate-900 transition-colors group">
+                <a href="mailto:business@example.com" className="flex items-center gap-3 p-3 bg-slate-900/50 rounded-lg hover:bg-slate-900 transition-colors group">
                   <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center">
                     <Mail size={20} className="text-indigo-400" />
                   </div>
                   <div>
-                    <div className="text-slate-500 text-xs">邮箱</div>
-                    <div className="text-white text-sm group-hover:text-indigo-400 transition-colors">contact@example.com</div>
+                    <div className="text-slate-500 text-xs">商务邮箱</div>
+                    <div className="text-white text-sm group-hover:text-indigo-400 transition-colors">business@example.com</div>
                   </div>
                 </a>
 
-                <a href="tel:+8613800138000" className="flex items-center gap-3 p-3 bg-slate-900/50 rounded-lg hover:bg-slate-900 transition-colors group">
+                <a href="tel:+86021123456789" className="flex items-center gap-3 p-3 bg-slate-900/50 rounded-lg hover:bg-slate-900 transition-colors group">
                   <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
                     <Phone size={20} className="text-green-400" />
                   </div>
                   <div>
-                    <div className="text-slate-500 text-xs">电话</div>
-                    <div className="text-white text-sm group-hover:text-green-400 transition-colors">138-0013-8000</div>
+                    <div className="text-slate-500 text-xs">咨询热线</div>
+                    <div className="text-white text-sm group-hover:text-green-400 transition-colors">021-1234-5678</div>
                   </div>
                 </a>
 
-                <a href="wechat:dev_portfolio" className="flex items-center gap-3 p-3 bg-slate-900/50 rounded-lg hover:bg-slate-900 transition-colors group">
-                  <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center">
-                    <MessageCircle size={20} className="text-emerald-400" />
+                <div className="flex items-center gap-3 p-3 bg-slate-900/50 rounded-lg">
+                  <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                    <MapPin size={20} className="text-purple-400" />
                   </div>
                   <div>
-                    <div className="text-slate-500 text-xs">微信</div>
-                    <div className="text-white text-sm group-hover:text-emerald-400 transition-colors">dev_portfolio</div>
+                    <div className="text-slate-500 text-xs">公司地址</div>
+                    <div className="text-white text-sm">上海市浦东新区张江高科技园区</div>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-4">
               <h3 className="text-base font-semibold text-white mb-2">快速响应</h3>
               <p className="text-slate-400 text-sm mb-3">
-                工作时间内 2 小时内回复，紧急情况可电话沟通
+                工作日 9:00-18:00 随时为您服务，紧急需求可电话沟通
               </p>
               <div className="flex items-center gap-2 text-indigo-400">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <span className="text-xs">通常在线</span>
+                <span className="text-xs">在线接单</span>
               </div>
             </div>
           </motion.div>
@@ -149,7 +149,7 @@ export default function Contact() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">提交成功！</h3>
                 <p className="text-slate-400 mb-6 text-sm">
-                  感谢您的咨询，我将尽快与您联系
+                  感谢您的咨询，我们的商务人员将在 24 小时内与您联系
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
@@ -162,7 +162,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-5 space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-slate-300 mb-1.5 font-medium text-sm">姓名 *</label>
+                    <label className="block text-slate-300 mb-1.5 font-medium text-sm">联系人 *</label>
                     <input
                       type="text"
                       name="name"
@@ -174,7 +174,7 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label className="block text-slate-300 mb-1.5 font-medium text-sm">公司</label>
+                    <label className="block text-slate-300 mb-1.5 font-medium text-sm">公司名称</label>
                     <input
                       type="text"
                       name="company"
@@ -245,7 +245,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-slate-300 mb-1.5 font-medium text-sm">项目描述</label>
+                  <label className="block text-slate-300 mb-1.5 font-medium text-sm">项目需求</label>
                   <textarea
                     name="description"
                     value={formData.description}

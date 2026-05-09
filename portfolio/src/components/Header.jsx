@@ -3,8 +3,8 @@ import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const navItems = [
-  { label: '技能', href: '#skills' },
-  { label: '项目', href: '#projects' },
+  { label: '服务', href: '#services' },
+  { label: '案例', href: '#projects' },
   { label: '关于', href: '#about' },
   { label: '联系', href: '#contact' }
 ];
@@ -39,13 +39,13 @@ export default function Header() {
         isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center gap-2">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex items-center justify-between h-16">
+          <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl font-heading">D</span>
+              <span className="text-white font-bold text-lg font-heading">智</span>
             </div>
-            <span className="text-xl font-heading font-semibold text-white hidden sm:block">DevPortfolio</span>
+            <span className="text-xl font-heading font-semibold text-white hidden sm:block">智创科技</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
