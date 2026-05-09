@@ -17,13 +17,13 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-slate-900 to-purple-900/20" />
       
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+      <div className="max-w-5xl mx-auto px-6 py-16 relative z-10">
         <div className="text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -31,8 +31,8 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="mb-6"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm">
-              <Sparkles size={16} />
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm">
+              <Sparkles size={14} />
               专注全栈开发 6 年
             </span>
           </motion.div>
@@ -41,7 +41,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-4 leading-tight"
           >
             用代码构建
             <br />
@@ -54,7 +54,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10"
+            className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed"
           >
             擅长园区管理系统、工厂MES、企业官网、数据可视化等项目的开发，
             <br className="hidden sm:block" />
@@ -65,18 +65,18 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3"
           >
             <button
               onClick={scrollToProjects}
-              className="group w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-xl hover:shadow-indigo-500/25 transition-all duration-300 flex items-center justify-center gap-2"
+              className="group w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium rounded-full hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 flex items-center justify-center gap-2"
             >
               查看项目案例
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={scrollToContact}
-              className="w-full sm:w-auto px-8 py-4 bg-slate-800/50 border border-slate-700 text-white font-semibold rounded-full hover:bg-slate-800 hover:border-slate-600 transition-all duration-300"
+              className="w-full sm:w-auto px-6 py-3 bg-slate-800/50 border border-slate-700 text-white font-medium rounded-full hover:bg-slate-800 hover:border-slate-600 transition-all duration-300"
             >
               获取报价方案
             </button>
@@ -86,21 +86,21 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-16 flex items-center justify-center gap-8 text-slate-500"
+            className="mt-12 flex items-center justify-center gap-6 text-slate-500"
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">50+</div>
-              <div className="text-sm">成功项目</div>
+              <div className="text-2xl font-bold text-white">50+</div>
+              <div className="text-xs">成功项目</div>
             </div>
-            <div className="w-px h-12 bg-slate-700" />
+            <div className="w-px h-8 bg-slate-700" />
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">6+</div>
-              <div className="text-sm">年开发经验</div>
+              <div className="text-2xl font-bold text-white">6+</div>
+              <div className="text-xs">年开发经验</div>
             </div>
-            <div className="w-px h-12 bg-slate-700" />
+            <div className="w-px h-8 bg-slate-700" />
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">30+</div>
-              <div className="text-sm">合作客户</div>
+              <div className="text-2xl font-bold text-white">30+</div>
+              <div className="text-xs">合作客户</div>
             </div>
           </motion.div>
         </div>
@@ -114,12 +114,12 @@ export default function Hero() {
         onClick={scrollToProjects}
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
+          animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
           className="flex flex-col items-center text-slate-500 hover:text-white transition-colors"
         >
-          <span className="text-sm mb-2">向下滚动</span>
-          <ChevronDown size={24} />
+          <span className="text-xs mb-1">向下滚动</span>
+          <ChevronDown size={20} />
         </motion.div>
       </motion.div>
     </section>
